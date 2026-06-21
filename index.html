@@ -6,11 +6,13 @@
     <title>دعوة زفاف: Fady & Mariam</title>
     <meta name="description" content="يسعدنا ويشرفنا حضوركم حفل زفاف فادي ومريم يوم الأحد 27 سبتمبر 2026">
     
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Cinzel:wght@400;600;700&family=Amiri:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Animation CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
     <style>
@@ -91,7 +93,8 @@
             align-items: center;
             text-align: center;
             position: relative;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://i.postimg.cc/p9dQF3TD/gallery1-JPG.jpg') no-repeat center center/cover;
+            /* تم استخدام الرابط الثالث هنا كخلفية أساسية للموقع */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://lh3.googleusercontent.com/d/1R48fZZvBORY-AsyDcPFr7tcXpEoWJbpn') no-repeat center center/cover;
             color: #fff;
             padding: 20px;
         }
@@ -156,7 +159,7 @@
         /* 3. Countdown Section */
         .countdown-sec {
             padding: 60px 20px;
-            background: linear-gradient(rgba(44,44,44,0.95), rgba(44,44,44,0.9)), url('https://i.postimg.cc/wtB5mnvK/gallery2-JPG.jpg') center center/cover;
+            background: linear-gradient(rgba(44,44,44,0.95), rgba(44,44,44,0.9)), url('https://lh3.googleusercontent.com/d/1Z_8RPP6hpn1CxByfW1NboRVL9ArQ8rL_') center center/cover;
             color: #fff;
             text-align: center;
         }
@@ -366,6 +369,7 @@
 </head>
 <body>
 
+    <!-- 1. Hero Section -->
     <section class="hero">
         <div data-aos="fade-up" data-aos-duration="1500">
             <h1 class="hero-names">Fady & Mariam</h1>
@@ -374,6 +378,7 @@
         </div>
     </section>
 
+    <!-- 2. Welcome Section -->
     <section class="welcome-sec">
         <div class="welcome-card" data-aos="zoom-in">
             <div class="guest-name" id="guestName">أهلاً وسهلاً بكم</div>
@@ -381,6 +386,7 @@
         </div>
     </section>
 
+    <!-- 3. Countdown Section -->
     <section class="countdown-sec">
         <h2 class="section-title" style="color:#fff;">الوقت المتبقي على الفرحة</h2>
         <div class="countdown-container" data-aos="fade-up">
@@ -391,6 +397,7 @@
         </div>
     </section>
 
+    <!-- 4. Story Section -->
     <section class="story-sec" data-aos="fade-up">
         <h2 class="section-title">قصة اليوم المميز</h2>
         <p class="story-text">
@@ -400,9 +407,11 @@
         </p>
     </section>
 
+    <!-- 5 & 6. Details & Maps Section -->
     <section class="details-sec">
         <h2 class="section-title">تفاصيل الحفل</h2>
         <div class="timeline">
+            <!-- Church Detail -->
             <div class="timeline-card" data-aos="fade-right">
                 <div class="timeline-icon"><i class="fas fa-church"></i></div>
                 <h3>صلاة الإكليل المقدس</h3>
@@ -413,6 +422,7 @@
                 </div>
             </div>
 
+            <!-- Hall Detail -->
             <div class="timeline-card" data-aos="fade-left">
                 <div class="timeline-icon"><i class="fas fa-glass-cheers"></i></div>
                 <h3>حفل الاستقبال</h3>
@@ -425,6 +435,7 @@
         </div>
     </section>
 
+    <!-- 7. Add to Calendar Section -->
     <section class="cal-sec" data-aos="fade-up">
         <h2 class="section-title">حفظ الموعد</h2>
         <p style="margin-bottom:20px; color:var(--text-muted);">لا تنسى إضافة حفل الزفاف إلى تقويمك الخاص</p>
@@ -433,29 +444,36 @@
         </div>
     </section>
 
+    <!-- 8. Gallery Section -->
     <section class="gallery-sec">
         <h2 class="section-title">معرض الصور</h2>
         <div class="gallery-grid" data-aos="fade-up">
-            <div class="gallery-item" onclick="openLightbox('https://i.postimg.cc/p9dQF3TD/gallery1-JPG.jpg')">
-                <img src="https://i.postimg.cc/p9dQF3TD/gallery1-JPG.jpg" alt="Wedding Pic 1">
+            <!-- الصورة الأولى -->
+            <div class="gallery-item" onclick="openLightbox('https://lh3.googleusercontent.com/d/1OulMykL5wnJ5DltzBguoOUUtXaxef6m0')">
+                <img src="https://lh3.googleusercontent.com/d/1OulMykL5wnJ5DltzBguoOUUtXaxef6m0" alt="Wedding Pic 1">
             </div>
-            <div class="gallery-item" onclick="openLightbox('https://i.postimg.cc/wtB5mnvK/gallery2-JPG.jpg')">
-                <img src="https://i.postimg.cc/wtB5mnvK/gallery2-JPG.jpg" alt="Wedding Pic 2">
+            <!-- الصورة الثانية -->
+            <div class="gallery-item" onclick="openLightbox('https://lh3.googleusercontent.com/d/1Z_8RPP6hpn1CxByfW1NboRVL9ArQ8rL_')">
+                <img src="https://lh3.googleusercontent.com/d/1Z_8RPP6hpn1CxByfW1NboRVL9ArQ8rL_" alt="Wedding Pic 2">
             </div>
-            <div class="gallery-item" onclick="openLightbox('https://i.postimg.cc/NKD7LQgQ/gallery3-JPG.jpg')">
-                <img src="https://i.postimg.cc/NKD7LQgQ/gallery3-JPG.jpg" alt="Wedding Pic 3">
+            <!-- الصورة الثالثة -->
+            <div class="gallery-item" onclick="openLightbox('https://lh3.googleusercontent.com/d/1R48fZZvBORY-AsyDcPFr7tcXpEoWJbpn')">
+                <img src="https://lh3.googleusercontent.com/d/1R48fZZvBORY-AsyDcPFr7tcXpEoWJbpn" alt="Wedding Pic 3">
             </div>
-            <div class="gallery-item" onclick="openLightbox('https://i.postimg.cc/v1SrLXgg/gallery4-JPG.jpg')">
-                <img src="https://i.postimg.cc/v1SrLXgg/gallery4-JPG.jpg" alt="Wedding Pic 4">
+            <!-- الصورة الرابعة -->
+            <div class="gallery-item" onclick="openLightbox('https://lh3.googleusercontent.com/d/18hgcMl415JalQIq1QJLUfCnwr8fMFGBc')">
+                <img src="https://lh3.googleusercontent.com/d/18hgcMl415JalQIq1QJLUfCnwr8fMFGBc" alt="Wedding Pic 4">
             </div>
         </div>
     </section>
 
+    <!-- Lightbox Container -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">×</span>
         <img id="lightboxImg" src="" alt="Enlarged view">
     </div>
 
+    <!-- 9. RSVP Section -->
     <section class="rsvp-sec" style="border-top: 3px double var(--primary-gold);">
         <div data-aos="zoom-in">
             <h2 class="section-title" style="color:var(--primary-gold);">تأكيد الحضور</h2>
@@ -466,10 +484,12 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>Fady & Mariam Wedding Invitation © 2026 | Designed with ❤️</p>
     </footer>
 
+    <!-- Animation & Logic JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         // تفعيل مكتبة الأنميشن AOS
