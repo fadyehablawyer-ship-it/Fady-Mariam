@@ -93,7 +93,6 @@
             align-items: center;
             text-align: center;
             position: relative;
-            /* تم تعيين الصورة المطلوبة كخلفية هنا */
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://lh3.googleusercontent.com/d/1Z_8RPP6hpn1CxByfW1NboRVL9ArQ8rL_') no-repeat center center/cover;
             color: #fff;
             padding: 20px;
@@ -159,7 +158,6 @@
         /* 3. Countdown Section */
         .countdown-sec {
             padding: 60px 20px;
-            /* تم الإبقاء عليها هنا أيضاً لتناسق الـ Sections */
             background: linear-gradient(rgba(44,44,44,0.95), rgba(44,44,44,0.9)), url('https://lh3.googleusercontent.com/d/1Z_8RPP6hpn1CxByfW1NboRVL9ArQ8rL_') center center/cover;
             color: #fff;
             text-align: center;
@@ -305,7 +303,10 @@
         /* Lightbox Layout */
         .lightbox {
             position: fixed;
-            top:0; left:0; width:100%; height:100%;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
             background: rgba(0,0,0,0.9);
             display: none;
             justify-content: center;
@@ -322,27 +323,11 @@
 
         .lightbox-close {
             position: absolute;
-            top: 20px; right: 20px;
-            color: #fff; font-size: 2rem; cursor: pointer;
-        }
-
-        /* 9. RSVP Footer Section */
-        .rsvp-sec {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #2C2C2C, #1A1A1A);
+            top: 20px;
+            right: 20px;
             color: #fff;
-            text-align: center;
-        }
-
-        .rsvp-btn {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            box-shadow: 0 4px 15px rgba(37,211,102,0.3);
-            font-size: 1.2rem;
-            padding: 15px 40px;
-        }
-
-        .rsvp-btn:hover {
-            box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+            font-size: 2rem;
+            cursor: pointer;
         }
 
         footer {
@@ -356,18 +341,33 @@
 
         /* Animations Keyframes */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Responsive changes */
         @media (max-width: 768px) {
-            .hero-names { font-size: 2.8rem; }
-            .section-title { font-size: 2rem; }
-            .timeline { flex-direction: column; }
+            .hero-names {
+                font-size: 2.8rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- 1. Hero Section -->
@@ -383,24 +383,43 @@
     <section class="welcome-sec">
         <div class="welcome-card" data-aos="zoom-in">
             <div class="guest-name" id="guestName">أهلاً وسهلاً بكم</div>
-            <p class="welcome-msg" id="welcomeMessage">في دعوتنا الخاصة لحضور يومنا المميز.</p>
+            <p class="welcome-msg" id="welcomeMessage">
+                في دعوتنا الخاصة لحضور يومنا المميز.
+            </p>
         </div>
     </section>
 
     <!-- 3. Countdown Section -->
     <section class="countdown-sec">
         <h2 class="section-title" style="color:#fff;">الوقت المتبقي على الفرحة</h2>
+
         <div class="countdown-container" data-aos="fade-up">
-            <div class="countdown-box"><div class="countdown-num" id="days">00</div><div>يوم</div></div>
-            <div class="countdown-box"><div class="countdown-num" id="hours">00</div><div>ساعة</div></div>
-            <div class="countdown-box"><div class="countdown-num" id="minutes">00</div><div>دقيقة</div></div>
-            <div class="countdown-box"><div class="countdown-num" id="seconds">00</div><div>ثانية</div></div>
+            <div class="countdown-box">
+                <div class="countdown-num" id="days">00</div>
+                <div>يوم</div>
+            </div>
+
+            <div class="countdown-box">
+                <div class="countdown-num" id="hours">00</div>
+                <div>ساعة</div>
+            </div>
+
+            <div class="countdown-box">
+                <div class="countdown-num" id="minutes">00</div>
+                <div>دقيقة</div>
+            </div>
+
+            <div class="countdown-box">
+                <div class="countdown-num" id="seconds">00</div>
+                <div>ثانية</div>
+            </div>
         </div>
     </section>
 
     <!-- 4. Story Section -->
     <section class="story-sec" data-aos="fade-up">
         <h2 class="section-title">قصة اليوم المميز</h2>
+
         <p class="story-text">
             "بداية لرحلة جديدة يملأها الحب والبركة.. <br>
             لحظة انتظرناها منذ زمن طويل وصنعنا تفاصيلها بشغف، <br>
@@ -411,143 +430,232 @@
     <!-- 5 & 6. Details & Maps Section -->
     <section class="details-sec">
         <h2 class="section-title">تفاصيل الحفل</h2>
+
         <div class="timeline">
+
             <!-- Church Detail -->
             <div class="timeline-card" data-aos="fade-right">
-                <div class="timeline-icon"><i class="fas fa-church"></i></div>
+                <div class="timeline-icon">
+                    <i class="fas fa-church"></i>
+                </div>
+
                 <h3>صلاة الإكليل المقدس</h3>
-                <p><strong>كنيسة السيدة العذراء مريم بالدقي</strong></p>
-                <p><i class="far fa-clock"></i> الساعة 5:30 مساءً</p>
+
+                <p>
+                    <strong>كنيسة السيدة العذراء مريم بالدقي</strong>
+                </p>
+
+                <p>
+                    <i class="far fa-clock"></i> الساعة 5:30 مساءً
+                </p>
+
                 <div class="map-buttons">
-                    <a href="https://share.google/8XY0kuGo6CrIg4z65" target="_blank" class="gold-btn"><i class="fas fa-map-marker-alt"></i> موقع الكنيسة</a>
+                    <a href="https://share.google/8XY0kuGo6CrIg4z65"
+                       target="_blank"
+                       class="gold-btn">
+                        <i class="fas fa-map-marker-alt"></i>
+                        موقع الكنيسة
+                    </a>
                 </div>
             </div>
 
             <!-- Hall Detail -->
             <div class="timeline-card" data-aos="fade-left">
-                <div class="timeline-icon"><i class="fas fa-glass-cheers"></i></div>
+                <div class="timeline-icon">
+                    <i class="fas fa-glass-cheers"></i>
+                </div>
+
                 <h3>حفل الاستقبال</h3>
-                <p><strong>قصر الشوق - دار الأسلحة والذخيرة</strong></p>
+
+                <p>
+                    <strong>قصر الشوق - دار الأسلحة والذخيرة</strong>
+                </p>
+
                 <p>طريق صلاح سالم</p>
+
                 <div class="map-buttons">
-                    <a href="https://maps.app.goo.gl/w3Aw1CBMbD9PRWR57?g_st=aw" target="_blank" class="gold-btn"><i class="fas fa-map-marker-alt"></i> موقع القاعة</a>
+                    <a href="https://maps.app.goo.gl/w3Aw1CBMbD9PRWR57?g_st=aw"
+                       target="_blank"
+                       class="gold-btn">
+                        <i class="fas fa-map-marker-alt"></i>
+                        موقع القاعة
+                    </a>
                 </div>
             </div>
+
         </div>
     </section>
 
     <!-- 7. Add to Calendar Section -->
     <section class="cal-sec" data-aos="fade-up">
         <h2 class="section-title">حفظ الموعد</h2>
-        <p style="margin-bottom:20px; color:var(--text-muted);">لا تنسى إضافة حفل الزفاف إلى تقويمك الخاص</p>
+
+        <p style="margin-bottom:20px; color:var(--text-muted);">
+            لا تنسى إضافة حفل الزفاف إلى تقويمك الخاص
+        </p>
+
         <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
-            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Fady+%26+Mariam&dates=20260927T160000Z/20260927T220000Z&details=حفل+زفاف+فادي+ومريم+في+كنيسة+العذراء+بالدقي+وقاعة+قصر+الشوق&location=دار+الأسلحة+والذخيرة،+صلاح+سالم" target="_blank" class="gold-btn"><i class="fab fa-google"></i> Google Calendar</a>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Fady+%26+Mariam&dates=20260927T160000Z/20260927T220000Z&details=حفل+زفاف+فادي+ومريم+في+كنيسة+العذراء+بالدقي+وقاعة+قصر+الشوق&location=دار+الأسلحة+والذخيرة،+صلاح+سالم"
+               target="_blank"
+               class="gold-btn">
+                <i class="fab fa-google"></i>
+                Google Calendar
+            </a>
         </div>
     </section>
 
     <!-- 8. Gallery Section -->
     <section class="gallery-sec">
         <h2 class="section-title">معرض الصور</h2>
+
         <div class="gallery-grid" data-aos="fade-up">
+
             <!-- الصورة الأولى -->
-            <div class="gallery-item" onclick="openLightbox('https://lh3.googleusercontent.com/d/1OulMykL5wnJ5DltzBguoOUUtXaxef6m0')">
-                <img src="https://lh3.googleusercontent.com/d/1OulMykL5wnJ5DltzBguoOUUtXaxef6m0" alt="Wedding Pic 1">
+            <div class="gallery-item"
+                 onclick="openLightbox('https://lh3.googleusercontent.com/d/1OulMykL5wnJ5DltzBguoOUUtXaxef6m0')">
+                <img src="https://lh3.googleusercontent.com/d/1OulMykL5wnJ5DltzBguoOUUtXaxef6m0"
+                     alt="Wedding Pic 1">
             </div>
+
             <!-- الصورة الثانية -->
-            <div class="gallery-item" onclick="openLightbox('https://lh3.googleusercontent.com/d/1Z_8RPP6hpn1CxByfW1NboRVL9ArQ8rL_')">
-                <img src="https://lh3.googleusercontent.com/d/1Z_8RPP6hpn1CxByfW1NboRVL9ArQ8rL_" alt="Wedding Pic 2">
+            <div class="gallery-item"
+                 onclick="openLightbox('https://lh3.googleusercontent.com/d/1Z_8RPP6hpn1CxByfW1NboRVL9ArQ8rL_')">
+                <img src="https://lh3.googleusercontent.com/d/1Z_8RPP6hpn1CxByfW1NboRVL9ArQ8rL_"
+                     alt="Wedding Pic 2">
             </div>
+
             <!-- الصورة الثالثة -->
-            <div class="gallery-item" onclick="openLightbox('https://lh3.googleusercontent.com/d/1R48fZZvBORY-AsyDcPFr7tcXpEoWJbpn')">
-                <img src="https://lh3.googleusercontent.com/d/1R48fZZvBORY-AsyDcPFr7tcXpEoWJbpn" alt="Wedding Pic 3">
+            <div class="gallery-item"
+                 onclick="openLightbox('https://lh3.googleusercontent.com/d/1R48fZZvBORY-AsyDcPFr7tcXpEoWJbpn')">
+                <img src="https://lh3.googleusercontent.com/d/1R48fZZvBORY-AsyDcPFr7tcXpEoWJbpn"
+                     alt="Wedding Pic 3">
             </div>
+
             <!-- الصورة الرابعة -->
-            <div class="gallery-item" onclick="openLightbox('https://lh3.googleusercontent.com/d/18hgcMl415JalQIq1QJLUfCnwr8fMFGBc')">
-                <img src="https://lh3.googleusercontent.com/d/18hgcMl415JalQIq1QJLUfCnwr8fMFGBc" alt="Wedding Pic 4">
+            <div class="gallery-item"
+                 onclick="openLightbox('https://lh3.googleusercontent.com/d/18hgcMl415JalQIq1QJLUfCnwr8fMFGBc')">
+                <img src="https://lh3.googleusercontent.com/d/18hgcMl415JalQIq1QJLUfCnwr8fMFGBc"
+                     alt="Wedding Pic 4">
             </div>
+
         </div>
     </section>
 
     <!-- Lightbox Container -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">×</span>
-        <img id="lightboxImg" src="" alt="Enlarged view">
-    </div>
+    <div id="lightbox"
+         class="lightbox"
+         onclick="closeLightbox()">
 
-    <!-- 9. RSVP Section -->
-    <section class="rsvp-sec" style="border-top: 3px double var(--primary-gold);">
-        <div data-aos="zoom-in">
-            <h2 class="section-title" style="color:var(--primary-gold);">تأكيد الحضور</h2>
-            <p style="margin-bottom: 30px; font-size:1.1rem;">يسعدنا تأكيد حضوركم لمشاركتنا فرحة العمر عبر الواتساب</p>
-            <a id="rsvpWhatsAppBtn" href="#" target="_blank" class="gold-btn rsvp-btn">
-                <i class="fab fa-whatsapp"></i> اضغط هنا لتأكيد الحضور
-            </a>
-        </div>
-    </section>
+        <span class="lightbox-close">×</span>
+
+        <img id="lightboxImg"
+             src=""
+             alt="Enlarged view">
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>Fady & Mariam Wedding Invitation © 2026 | Designed with ❤️</p>
+        <p>
+            Fady & Mariam Wedding Invitation © 2026 | Designed with ❤️
+        </p>
     </footer>
 
     <!-- Animation & Logic JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <script>
         // تفعيل مكتبة الأنميشن AOS
         AOS.init({ once: true });
 
-        // استقبال اسم الضيف ديناميكياً من الرابط وتعديل رسالة الواتساب
+        // استقبال اسم الضيف ديناميكياً من الرابط
         const urlParams = new URLSearchParams(window.location.search);
         const guestName = urlParams.get('guest');
-        
-        let whatsappText = "";
 
         if (guestName) {
             const cleanName = decodeURIComponent(guestName);
-            document.getElementById('guestName').innerText = `أهلاً وسهلاً ${cleanName}،`;
-            document.getElementById('welcomeMessage').innerText = `يسعدنا ويشرفنا حضورك هذا اليوم المميز الذي صُنع بذكرياته من أجل أحبائنا.`;
-            whatsappText = encodeURIComponent(`مرحباً،\nأنا ${cleanName} وأؤكد حضوري لحفل زفاف Fady & Mariam.`);
+
+            document.getElementById('guestName').innerText =
+                `أهلاً وسهلاً ${cleanName}،`;
+
+            document.getElementById('welcomeMessage').innerText =
+                `يسعدنا ويشرفنا حضورك هذا اليوم المميز الذي صُنع بذكرياته من أجل أحبائنا.`;
+
         } else {
-            document.getElementById('guestName').innerText = `أهلاً وسهلاً بكم`;
-            document.getElementById('welcomeMessage').innerText = `في دعوتنا الخاصة لحضور يومنا المميز.`;
-            whatsappText = encodeURIComponent(`مرحباً،\nأؤكد حضوري لحفل زفاف Fady & Mariam.`);
+
+            document.getElementById('guestName').innerText =
+                `أهلاً وسهلاً بكم`;
+
+            document.getElementById('welcomeMessage').innerText =
+                `في دعوتنا الخاصة لحضور يومنا المميز.`;
         }
 
-        // ربط رسالة الواتساب بالزر
-        document.getElementById('rsvpWhatsAppBtn').href = `https://wa.me/201220784066?text=${whatsappText}`;
-
-        // العداد التنازلي الحي (Countdown)
-        const targetDate = new Date("September 27, 2026 18:00:00").getTime();
+        // العداد التنازلي الحي
+        const targetDate =
+            new Date("September 27, 2026 18:00:00").getTime();
 
         const countdownInterval = setInterval(function() {
+
             const now = new Date().getTime();
             const difference = targetDate - now;
 
             if (difference < 0) {
+
                 clearInterval(countdownInterval);
-                document.querySelector('.countdown-container').innerHTML = "<h3>الفرحة بدأت! منورين جميعاً</h3>";
+
+                document.querySelector('.countdown-container').innerHTML =
+                    "<h3>الفرحة بدأت! منورين جميعاً</h3>";
+
                 return;
             }
 
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            const days =
+                Math.floor(difference / (1000 * 60 * 60 * 24));
 
-            document.getElementById("days").innerText = String(days).padStart(2, '0');
-            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+            const hours =
+                Math.floor(
+                    (difference % (1000 * 60 * 60 * 24))
+                    / (1000 * 60 * 60)
+                );
+
+            const minutes =
+                Math.floor(
+                    (difference % (1000 * 60 * 60))
+                    / (1000 * 60)
+                );
+
+            const seconds =
+                Math.floor(
+                    (difference % (1000 * 60))
+                    / 1000
+                );
+
+            document.getElementById("days").innerText =
+                String(days).padStart(2, '0');
+
+            document.getElementById("hours").innerText =
+                String(hours).padStart(2, '0');
+
+            document.getElementById("minutes").innerText =
+                String(minutes).padStart(2, '0');
+
+            document.getElementById("seconds").innerText =
+                String(seconds).padStart(2, '0');
+
         }, 1000);
 
         // التحكم بمعرض الصور (Lightbox)
         function openLightbox(imgUrl) {
+
             document.getElementById('lightboxImg').src = imgUrl;
+
             document.getElementById('lightbox').style.display = 'flex';
         }
+
         function closeLightbox() {
+
             document.getElementById('lightbox').style.display = 'none';
         }
     </script>
+
 </body>
 </html>
